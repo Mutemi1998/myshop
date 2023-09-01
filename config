@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name kenne.com;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /root/app/myshop;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://127.0.0.1:8000;
+    }
+}
