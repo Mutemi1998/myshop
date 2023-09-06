@@ -58,7 +58,7 @@ ENV DJANGO_SUPERUSER_EMAIL=commerce@commerce.com
 ENV DJANGO_SUPERUSER_PASSWORD=password
 
 #create super user
-RUN python3 manage.py createsuperuser --noinput
+#RUN python3 manage.py createsuperuser --noinput
 
 # Make the script executable
 RUN chmod +x /start.sh
