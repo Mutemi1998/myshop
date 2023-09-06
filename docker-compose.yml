@@ -8,15 +8,40 @@ services:
       - "8000:80"
     depends_on:
       - mysql
+      - rabbitmq
+    volumes:
+      - myshop-data:/app
 
   mysql:
     image: mysql:latest
     container_name: mysql-container
     environment:
-      MYSQL_ROOT_PASSWORD: mysqlpassword  # Set your MySQL root password
-      MYSQL_DATABASE: myshopdb  # Set your database name
+      MYSQL_ROOT_PASSWORD: password  # Set your MySQL root password
+      MYSQL_DATABASE: myshop  # Set your database name
     volumes:
       - mysql-data:/var/lib/mysql  # Mount a volume for MySQL data persistence
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin-container
+    environment:
+      PMA_HOST: mysql
+      # PMA_USER: root
+      # PMA_PASSWORD: password
+    ports:
+      - "8080:80"  # Map PHPMyAdmin to port 8080 on the host
+
+
+  rabbitmq:
+    image: "rabbitmq:management"
+    container_name: rabbitmq-container
+    ports:
+      - "5672:5672"  # RabbitMQ default port
+      - "15672:15672"  # RabbitMQ Management UI port
+    environment:
+      RABBITMQ_DEFAULT_USER: commerce
+      RABBITMQ_DEFAULT_PASS: password
+
 volumes:
   mysql-data:
+  myshop-data:

@@ -19,5 +19,3 @@ Then check http://<ip>
 
 
 # Set Super admin credentials in docker file
-
-#

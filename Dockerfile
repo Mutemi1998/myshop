@@ -10,6 +10,7 @@ RUN apt update
 RUN apt install -y \
     git \
     nginx \
+    iputils-ping \
     python3-pip \
     python3-dev \
     python3-venv \
