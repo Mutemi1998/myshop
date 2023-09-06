@@ -92,7 +92,7 @@ DATABASES = {
         "NAME": "myshopdb",  # Replace with your actual database name
         "USER": "root",  # Replace with your actual database username
         "PASSWORD": "mysqlpassword",  # Replace with your actual database password
-        "HOST": "172.19.0.2",  # Replace with the database host if it's not on your local machine
+        "HOST": "mysql-container",  # Replace with the database host if it's not on your local machine
     }
 }
 

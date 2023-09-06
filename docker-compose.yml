@@ -2,7 +2,7 @@ version: '3'
 
 services:
   django:
-    image: myshop
+    build: .
     container_name: django-container
     ports:
       - "8000:80"
