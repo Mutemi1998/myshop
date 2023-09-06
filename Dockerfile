@@ -47,7 +47,7 @@ RUN nginx -t
 
 # Collect static files and perform migrations
 RUN python3 manage.py collectstatic --noinput
-RUN python3 manage.py migrate 
+#RUN python3 manage.py migrate 
 
 # Copy the start script into the container
 COPY start.sh /start.sh
