@@ -80,21 +80,21 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "myshop",  # Replace with your actual database name
-        "USER": "root",  # Replace with your actual database username
-        "PASSWORD": "password",  # Replace with your actual database password
-        "HOST": "mysql-container",  # Replace with the database host if it's not on your local machine
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "myshop",  # Replace with your actual database name
+#         "USER": "root",  # Replace with your actual database username
+#         "PASSWORD": "password",  # Replace with your actual database password
+#         "HOST": "mysql-container",  # Replace with the database host if it's not on your local machine
+#     }
+# }
 
 
 # Password validation

@@ -44,7 +44,16 @@ def payment_process(request):
         return render(request, 'payment/process.html', locals())
     
 def payment_completed(request):
+    order_id = request.session.get('order_id', None)
+    payment_status(order_id,status="True")
     return render(request, 'payment/completed.html')
 
 def payment_canceled(request):
+    order_id = request.session.get('order_id', None)
+    payment_status(order_id)
     return render(request, 'payment/canceled.html')
+
+def payment_status(order_id,status = "False"):
+    order = Order.objects.get(id=order_id)
+    order.paid = status
+    order.save()
