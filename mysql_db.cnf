@@ -1,0 +1,7 @@
+[client]
+database = myshopdb
+user = root
+password = mysqlpassword
+default-character-set = utf8
+host = mysql-database  # Use the name of the MySQL container as the host
+port = 3306

@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  django:
+    image: myshop
+    container_name: django-container
+    ports:
+      - "8000:80"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlpassword  # Set your MySQL root password
+      MYSQL_DATABASE: myshopdb  # Set your database name
+    volumes:
+      - mysql-data:/var/lib/mysql  # Mount a volume for MySQL data persistence
+
+volumes:
+  mysql-data:

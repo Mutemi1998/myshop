@@ -19,3 +19,5 @@ docker build -t  myshop .
 # Run the image
 
  docker run -d -p 80:80 myshop
+
+# Set Super admin credentials in docker file
