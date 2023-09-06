@@ -46,8 +46,7 @@ RUN ln -s /etc/nginx/sites-available/config /etc/nginx/sites-enabled
 RUN nginx -t
 
 # Collect static files and perform migrations
-RUN python3 manage.py collectstatic --noinput
-#RUN python3 manage.py migrate 
+RUN python3 manage.py collectstatic --noinput 
 
 # Copy the start script into the container
 COPY start.sh /start.sh
@@ -57,8 +56,6 @@ ENV DJANGO_SUPERUSER_USERNAME=commerce
 ENV DJANGO_SUPERUSER_EMAIL=commerce@commerce.com
 ENV DJANGO_SUPERUSER_PASSWORD=password
 
-#create super user
-#RUN python3 manage.py createsuperuser --noinput
 
 # Make the script executable
 RUN chmod +x /start.sh

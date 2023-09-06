@@ -12,12 +12,12 @@ clone the repository
 
 Then  change pwd to myshop
 
-# Build docker image
 
-docker build -t  myshop .
+docker-compose up --build -d
 
-# Run the image
+Then check http://<ip>
 
- docker run -d -p 80:80 myshop
 
 # Set Super admin credentials in docker file
+
+#
