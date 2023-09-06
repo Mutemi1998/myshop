@@ -86,15 +86,16 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "OPTIONS": {
-            "read_default_file": "mysql_db.cnf",
-        },
+        "NAME": "myshopdb",  # Replace with your actual database name
+        "USER": "root",  # Replace with your actual database username
+        "PASSWORD": "mysqlpassword",  # Replace with your actual database password
+        "HOST": "172.19.0.2",  # Replace with the database host if it's not on your local machine
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

@@ -26,6 +26,7 @@ vine==5.0.0
 wcwidth==0.2.6
 yarg==0.1.9
 pymysql==1.1.0 
+cryptography==41.0.3
 djangorestframework
 markdown
 django-filter
