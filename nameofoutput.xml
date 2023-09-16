@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Wed Sep  6 21:06:06 2023 as: nmap -sC -sV -p- -oA nameofoutput admin.sasakonnect.net -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p- -oA nameofoutput admin.sasakonnect.net" start="1694023566" startstr="Wed Sep  6 21:06:06 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="105.29.165.254" addrtype="ipv4"/>
+<hostnames>
+<hostname name="admin.sasakonnect.net" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1694023582" endtime="1694024994"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="105.29.165.254" addrtype="ipv4"/>
+<hostnames>
+<hostname name="admin.sasakonnect.net" type="user"/>
+</hostnames>
+<ports><extraports state="closed" count="65522">
+<extrareasons reason="conn-refused" count="65522" proto="tcp" ports="1-79,81-442,444-1722,1724-8000,8002-8802,8804-8999,9001,9003-9442,9444-10010,10012-13305,13307-21114,21118-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.20.2" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.20.2</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.20.2" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.20.2</cpe></service><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="ssl-cert" output="Subject: commonName=admin.sasakonnect.net&#xa;Subject Alternative Name: DNS:admin.sasakonnect.net&#xa;Not valid before: 2023-03-25T00:00:00&#xa;Not valid after:  2024-03-24T23:59:59"><table key="subject">
+<elem key="commonName">admin.sasakonnect.net</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Encryption Everywhere DV TLS CA - G1</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">DigiCert Inc</elem>
+<elem key="organizationalUnitName">www.digicert.com</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C8AAC61F61735E81B43F66C11A8CB70E72D9853C6B9057CD4706EE4366F1D6AC40545070103E23F16A89305FF5C9D047CFD4B6836E80589351157C72C37F003090B315D8712F0D686A413CEF93D9B5DEF748306B0758A9597E0DDC1C28D96EB2EF3E43C8F97160FBDF2015DE3D25CEA9927BCE77ABB5F96109770340E643C3120CD72376AEB14FBECFF72FF742C42404E1B9B403EE16ED73FB2726BA5604F1200FE1207E9B2801FC9BD560F7E9058DD1F7BEEA1C2489C99866A92F7AE90B8EF1C5B1AF71D412885D794CA19A26C33662EA016E29AE43699577D3FB3244E7B59077B8C3E742AB62217BF1DFF2DAC59E15A486083A310B94A4EFD0B37D0B5CE7AD</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">55:74:4F:B2:72:4F:F5:60:BA:50:D1:D7:E6:51:5C:9A:01:87:1A:D7</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">1A:8E:14:58:3F:7A:99:20:B8:16:CF:9C:37:9E:C6:59:84:91:7D:85</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:admin.sasakonnect.net</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1&#xa;  CPS: http://www.digicert.com/CPS</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://ocsp.digicert.com&#xa;CA Issuers - URI:http://cacerts.digicert.com/EncryptionEverywhereDVTLSCA-G1.crt</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : EE:CD:D0:64:D5:DB:1A:CE:C5:5C:B7:9D:B4:CD:13:A2:&#xa;                32:87:46:7C:BC:EC:DE:C3:51:48:59:46:71:1F:B5:9B&#xa;    Timestamp : Mar 25 06:04:02.417 2023 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:25:F3:42:91:5B:85:FA:1A:68:CA:6C:98:&#xa;                B4:6C:4B:3F:44:45:FB:87:7A:81:34:54:C4:9F:0D:16:&#xa;                15:A6:AC:62:02:21:00:BF:14:76:DB:9C:F0:A6:6A:92:&#xa;                AA:49:1D:1B:0B:33:58:B5:2B:FF:93:4C:1E:5F:93:3F:&#xa;                E1:49:7D:26:DB:55:F6&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 48:B0:E3:6B:DA:A6:47:34:0F:E5:6A:02:FA:9D:30:EB:&#xa;                1C:52:01:CB:56:DD:2C:81:D9:BB:BF:AB:39:D8:84:73&#xa;    Timestamp : Mar 25 06:04:02.478 2023 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:37:50:48:59:B7:83:16:53:14:A3:6D:AA:&#xa;                D7:92:F4:81:99:4C:C3:0E:F2:8F:E2:EE:C9:20:8A:D8:&#xa;                4B:BF:2A:B0:02:20:3C:23:53:04:F0:BA:56:18:ED:9B:&#xa;                45:EE:80:DE:C4:44:86:CC:6C:26:35:63:B2:9B:E0:70:&#xa;                D2:C3:80:C8:3B:5A&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : DA:B6:BF:6B:3F:B5:B6:22:9F:9B:C2:BB:5C:6B:E8:70:&#xa;                91:71:6C:BB:51:84:85:34:BD:A4:3D:30:48:D7:FB:AB&#xa;    Timestamp : Mar 25 06:04:02.421 2023 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:D7:B1:91:EA:3E:42:B9:68:AB:E0:26:&#xa;                54:39:6B:CE:5B:0B:E2:48:64:82:CC:30:78:D5:69:D9:&#xa;                85:3E:FC:74:EF:02:21:00:C7:15:6A:25:60:C9:9F:28:&#xa;                55:AA:3B:64:18:70:4B:6E:F2:39:C1:C0:E3:B1:BC:08:&#xa;                7E:E8:0A:FD:30:19:47:B9</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2023-03-25T00:00:00</elem>
+<elem key="notAfter">2024-03-24T23:59:59</elem>
+</table>
+<elem key="md5">c5382ff0687b4b33616566db2626b278</elem>
+<elem key="sha1">2d9e953b59e9c74e78a1effdd7fe7b437a44fb85</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIF/zCCBOegAwIBAgIQBvfX5RcsnD9+feIRuTuhfjANBgkqhkiG9w0BAQsFADBu&#xa;MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3&#xa;d3cuZGlnaWNlcnQuY29tMS0wKwYDVQQDEyRFbmNyeXB0aW9uIEV2ZXJ5d2hlcmUg&#xa;RFYgVExTIENBIC0gRzEwHhcNMjMwMzI1MDAwMDAwWhcNMjQwMzI0MjM1OTU5WjAg&#xa;MR4wHAYDVQQDExVhZG1pbi5zYXNha29ubmVjdC5uZXQwggEiMA0GCSqGSIb3DQEB&#xa;AQUAA4IBDwAwggEKAoIBAQDIqsYfYXNegbQ/ZsEajLcOctmFPGuQV81HBu5DZvHW&#xa;rEBUUHAQPiPxaokwX/XJ0EfP1LaDboBYk1EVfHLDfwAwkLMV2HEvDWhqQTzvk9m1&#xa;3vdIMGsHWKlZfg3cHCjZbrLvPkPI+XFg+98gFd49Jc6pknvOd6u1+WEJdwNA5kPD&#xa;EgzXI3ausU++z/cv90LEJAThubQD7hbtc/snJrpWBPEgD+EgfpsoAfyb1WD36QWN&#xa;0fe+6hwkicmYZqkveukLjvHFsa9x1BKIXXlMoZomwzZi6gFuKa5DaZV30/syROe1&#xa;kHe4w+dCq2Ihe/Hf8trFnhWkhgg6MQuUpO/Qs30LXOetAgMBAAGjggLlMIIC4TAf&#xa;BgNVHSMEGDAWgBRVdE+yck/1YLpQ0dfmUVyaAYca1zAdBgNVHQ4EFgQUGo4UWD96&#xa;mSC4Fs+cN57GWYSRfYUwIAYDVR0RBBkwF4IVYWRtaW4uc2FzYWtvbm5lY3QubmV0&#xa;MA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIw&#xa;PgYDVR0gBDcwNTAzBgZngQwBAgEwKTAnBggrBgEFBQcCARYbaHR0cDovL3d3dy5k&#xa;aWdpY2VydC5jb20vQ1BTMIGABggrBgEFBQcBAQR0MHIwJAYIKwYBBQUHMAGGGGh0&#xa;dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBKBggrBgEFBQcwAoY+aHR0cDovL2NhY2Vy&#xa;dHMuZGlnaWNlcnQuY29tL0VuY3J5cHRpb25FdmVyeXdoZXJlRFZUTFNDQS1HMS5j&#xa;cnQwCQYDVR0TBAIwADCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXb&#xa;Gs7FXLedtM0TojKHRny87N7DUUhZRnEftZsAAAGHF13l8QAABAMARzBFAiAl80KR&#xa;W4X6GmjKbJi0bEs/REX7h3qBNFTEnw0WFaasYgIhAL8Udtuc8KZqkqpJHRsLM1i1&#xa;K/+TTB5fkz/hSX0m21X2AHUASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznY&#xa;hHMAAAGHF13mLgAABAMARjBEAiA3UEhZt4MWUxSjbarXkvSBmUzDDvKP4u7JIIrY&#xa;S78qsAIgPCNTBPC6Vhjtm0XugN7ERIbMbCY1Y7Kb4HDSw4DIO1oAdwDatr9rP7W2&#xa;Ip+bwrtca+hwkXFsu1GEhTS9pD0wSNf7qwAAAYcXXeX1AAAEAwBIMEYCIQDXsZHq&#xa;PkK5aKvgJlQ5a85bC+JIZILMMHjVadmFPvx07wIhAMcVaiVgyZ8oVao7ZBhwS27y&#xa;OcHA47G8CH7oCv0wGUe5MA0GCSqGSIb3DQEBCwUAA4IBAQBYFcm7GhuL3OTzTmkk&#xa;jNZRB6ZeHlK8reenAOraGTQftsaLsDWfxa1A5YVoxxdF8+HSIg1z7wzfB0340goO&#xa;W+wt2LWbQBQdZ+DbWq0GD2iG1CM1EBmrkjPZZXNSO3Tr8/5g46C79j4xedOknu1C&#xa;+F3dojjDWV/F1Gri5Jcow0m5wxc2CkUj8S3hL2g8Uwoisur1Sg3CtNzVkzMVCZhP&#xa;OvRdsu/MgyhO0cNmzqXKuuC8l0GhwrEmtjH3z/+1cZtlek85dB4ruHa0DapKXWXN&#xa;gMZdy47AkE0SJxzKWKsH3T/5ysPrMhcEoUui/EaUft7nNcbUtdzCg9gUULqLdjOB&#xa;ImcS&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/><script id="http-server-header" output="nginx/1.20.2"><elem>nginx/1.20.2</elem>
+</script><script id="http-title" output="Konnect | Admin Interface "><elem key="title">Konnect | Admin Interface </elem>
+</script><script id="tls-nextprotoneg" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script></port>
+<port protocol="tcp" portid="1723"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="pptp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8001"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.20.2" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.20.2</cpe></service><script id="http-title" output="Index of /"><elem key="title">Index of /</elem>
+</script><script id="http-ls" output="Volume /&#xa;SIZE      TIME               FILENAME&#xa;17487783  06-Dec-2021 10:12  KonnectAuth.apk&#xa;159726    01-Oct-2022 08:45  privacy_policy.html&#xa;&#xa;"><table key="volumes">
+<table>
+<table key="files">
+<table>
+<elem key="filename">KonnectAuth.apk</elem>
+<elem key="size">17487783</elem>
+<elem key="time">06-Dec-2021 10:12</elem>
+</table>
+<table>
+<elem key="filename">privacy_policy.html</elem>
+<elem key="size">159726</elem>
+<elem key="time">01-Oct-2022 08:45</elem>
+</table>
+</table>
+<elem key="volume">/</elem>
+</table>
+</table>
+<table key="total">
+<elem key="bytes">17647509</elem>
+<elem key="files">2</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.20.2"><elem>nginx/1.20.2</elem>
+</script></port>
+<port protocol="tcp" portid="8803"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+<port protocol="tcp" portid="9000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="nagios-nsca" product="Nagios NSCA" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="9002"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="HP Integrated Lights-Out web interface" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/h:hp:integrated_lights-out</cpe></service><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-cert" output="Subject: commonName=ILOCN77150B4W/organizationName=Hewlett Packard Enterprise/stateOrProvinceName=Texas/countryName=US&#xa;Subject Alternative Name: DNS:ILOCN77150B4W&#xa;Not valid before: 2017-04-15T12:50:04&#xa;Not valid after:  2032-04-14T12:50:04"><table key="subject">
+<elem key="commonName">ILOCN77150B4W</elem>
+<elem key="countryName">US</elem>
+<elem key="localityName">Houston</elem>
+<elem key="organizationName">Hewlett Packard Enterprise</elem>
+<elem key="organizationalUnitName">ISS</elem>
+<elem key="stateOrProvinceName">Texas</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Default Issuer (Do not trust)</elem>
+<elem key="countryName">US</elem>
+<elem key="localityName">Houston</elem>
+<elem key="organizationName">Hewlett Packard Enterprise</elem>
+<elem key="organizationalUnitName">ISS</elem>
+<elem key="stateOrProvinceName">Texas</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">ABDFEBB1D3BF1E05C33C517E479679F4605E830DA6ACAD555FDA4E0A6C46E97E7BAAB711884BAE60B58DCA0F08EED6A4798CBCBB7D0D2B0AF3D591793B33A7D73601C0260A5320B997A47DEE3E8CF5CF9EE08BD2FCFD118F2AB1CF43FBB9DC09E31F675027DDE56C2E6780395F7C046D98DA79F7CCC2D5D05A3425688352CDF9</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:ILOCN77150B4W</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2017-04-15T12:50:04</elem>
+<elem key="notAfter">2032-04-14T12:50:04</elem>
+</table>
+<elem key="md5">48e015f95df641feedf26df26ca36ec7</elem>
+<elem key="sha1">12c7b4f2552683ac8a770b97b2f8fe601303064d</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICtjCCAh+gAwIBAgIIf1a4uxVHQeYwDQYJKoZIhvcNAQELBQAwgYoxJjAkBgNV&#xa;BAMMHURlZmF1bHQgSXNzdWVyIChEbyBub3QgdHJ1c3QpMSMwIQYDVQQKDBpIZXds&#xa;ZXR0IFBhY2thcmQgRW50ZXJwcmlzZTEMMAoGA1UECwwDSVNTMRAwDgYDVQQHDAdI&#xa;b3VzdG9uMQ4wDAYDVQQIDAVUZXhhczELMAkGA1UEBhMCVVMwHhcNMTcwNDE1MTI1&#xa;MDA0WhcNMzIwNDE0MTI1MDA0WjB6MRYwFAYDVQQDDA1JTE9DTjc3MTUwQjRXMSMw&#xa;IQYDVQQKDBpIZXdsZXR0IFBhY2thcmQgRW50ZXJwcmlzZTEMMAoGA1UECwwDSVNT&#xa;MRAwDgYDVQQHDAdIb3VzdG9uMQ4wDAYDVQQIDAVUZXhhczELMAkGA1UEBhMCVVMw&#xa;gZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKvf67HTvx4FwzxRfkeWefRgXoMN&#xa;pqytVV/aTgpsRul+e6q3EYhLrmC1jcoPCO7WpHmMvLt9DSsK89WReTszp9c2AcAm&#xa;ClMguZekfe4+jPXPnuCL0vz9EY8qsc9D+7ncCeMfZ1An3eVsLmeAOV98BG2Y2nn3&#xa;zMLV0Fo0JWiDUs35AgMBAAGjNDAyMAsGA1UdDwQEAwIFoDAJBgNVHSMEAjAAMBgG&#xa;A1UdEQQRMA+CDUlMT0NONzcxNTBCNFcwDQYJKoZIhvcNAQELBQADgYEAYf7buEaq&#xa;vqIdeo1VOL0FhnFo45dDDDejvrr/A7Qts+tpGCjTN6vJTorHSX24CzI9u1jfnjL9&#xa;F22POBy+cB8GtTQ7uGB25+poENi5LOT9ydTCNH/KeZWvtcgJ1ymdwLzcwb6zp0Nf&#xa;P3MOsplZKHjr1CASiDf2h+6wF8JOC0Gc/Ac=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="9443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="nagios-nsca" product="Nagios NSCA" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="10011"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 d8:a8:9d:c7:05:99:26:f4:8e:c1:1c:f8:b4:b1:7c:d2 (RSA)&#xa;  256 c2:24:68:13:3d:47:17:06:0b:5b:df:12:3c:fe:ce:b1 (ECDSA)&#xa;  256 87:fb:82:d6:3f:d8:9a:78:3b:77:8a:1e:01:df:92:f7 (ED25519)"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDiarynxlO3zRX23W6tvTKQV6/Do+kzHSahKQQsxbPrqnG8kDFKzR4PhqHzpFeUiWo7EYe1M+fG2xCiBYbtBXRZLJxUYWJiBxUXeBaDrQbne5jae8FBMFpUQoPRr5oS/semLJaDC9q9N2PzrwUhv29Q16tDwJpTAX3fqXruzpWwlhvf6hOK4mBMiJczAhkwWAwBOsSZ0cXWDxNBFqtOQ936ZDnJ34wlF//2TnnWxWSNRkXDRtXnAtz8B5QYpOC52axmXz2Bj9BTSOL85972tN3w3ObpzoRerfEnAcKPaan275kbcRphsEXwiIHmiDXYgitaOxgKt1IeMwHLs+2J4JF1</elem>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">d8a89dc7059926f48ec11cf8b4b17cd2</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLuWKgWEg7i1CeIyBpg9Ul1pNZiwXgBseSxreUBii1G+auzl1ACiQlAXDfY5jhY57k0jTi075LFZCfeoJDL1Wcc=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">c22468133d4717060b5bdf123cfeceb1</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIJugKDQhtCoRbIK5spquQ+rwDDMpQnxOPzrVEVKTCp9M</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">87fb82d63fd89a783b778a1e01df92f7</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="13306"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mysql" product="MySQL" version="5.5.5-10.5.9-MariaDB-log" method="probed" conf="10"><cpe>cpe:/a:mariadb:mariadb:5.5.5-10.5.9-mariadb-log</cpe></service><script id="mysql-info" output="&#xa;  Protocol: 10&#xa;  Version: 5.5.5-10.5.9-MariaDB-log&#xa;  Thread ID: 3391774&#xa;  Capabilities flags: 65534&#xa;  Some Capabilities: SwitchToSSLAfterHandshake, FoundRows, SupportsCompression, DontAllowDatabaseTableColumn, Speaks41ProtocolOld, SupportsTransactions, IgnoreSigpipes, LongColumnFlag, SupportsLoadDataLocal, ODBCClient, Support41Auth, IgnoreSpaceBeforeParenthesis, InteractiveClient, Speaks41ProtocolNew, ConnectWithDatabase, SupportsAuthPlugins, SupportsMultipleStatments, SupportsMultipleResults&#xa;  Status: Autocommit&#xa;  Salt: uB)BT__AdTW;^G*:&apos;RJY&#xa;  Auth Plugin Name: mysql_native_password"><elem key="Protocol">10</elem>
+<elem key="Version">5.5.5-10.5.9-MariaDB-log</elem>
+<elem key="Thread ID">3391774</elem>
+<elem key="Capabilities flags">65534</elem>
+<table key="Some Capabilities">
+<elem>SwitchToSSLAfterHandshake</elem>
+<elem>FoundRows</elem>
+<elem>SupportsCompression</elem>
+<elem>DontAllowDatabaseTableColumn</elem>
+<elem>Speaks41ProtocolOld</elem>
+<elem>SupportsTransactions</elem>
+<elem>IgnoreSigpipes</elem>
+<elem>LongColumnFlag</elem>
+<elem>SupportsLoadDataLocal</elem>
+<elem>ODBCClient</elem>
+<elem>Support41Auth</elem>
+<elem>IgnoreSpaceBeforeParenthesis</elem>
+<elem>InteractiveClient</elem>
+<elem>Speaks41ProtocolNew</elem>
+<elem>ConnectWithDatabase</elem>
+<elem>SupportsAuthPlugins</elem>
+<elem>SupportsMultipleStatments</elem>
+<elem>SupportsMultipleResults</elem>
+</table>
+<elem key="Status">Autocommit</elem>
+<elem key="Salt">uB)BT__AdTW;^G*:&apos;RJY</elem>
+<elem key="Auth Plugin Name">mysql_native_password</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-cert" output="Subject: commonName=db_master/organizationName=Default Company Ltd/countryName=XX&#xa;Not valid before: 2022-05-09T06:45:24&#xa;Not valid after:  2022-06-08T06:45:24"><table key="subject">
+<elem key="commonName">db_master</elem>
+<elem key="countryName">XX</elem>
+<elem key="localityName">Default City</elem>
+<elem key="organizationName">Default Company Ltd</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">ca.ahadi</elem>
+<elem key="countryName">XX</elem>
+<elem key="localityName">Default City</elem>
+<elem key="organizationName">Default Company Ltd</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">E1243E89DE8CBC2F0A855050CC280FBF9E6488B6D6569E3044B25B6D3F493AE99DD078E49B9942DA6063B96A93E5DF1B10D2125AC7E00407F04DF4A5F2A52A6742A8B2629CD366A2947C791E9811B8F6719D039AED7E23053E13EDB2FF32E0B46BF37E4DEBA9B87B642D299933C1924E5AFCB2B780E37C807A06A86ECD5FADEA7EFA5A7FD35B477B0AFC7F406CAF022133677D18ED208FB0ACB01C99877F77E683C5F57AEC9442DE785DBADA1867BB6EBE0CC5F4094D4953760F3D750B911C070F47D5CA56103CC2FEB05CC827428F60B4918E0217EE2C1D07CA8BF54D282FC9AFF81E25BF6EDFF01806BE1FCF9CF178BEAE5CC4095A753E0870FFC13A94E7CD</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-05-09T06:45:24</elem>
+<elem key="notAfter">2022-06-08T06:45:24</elem>
+</table>
+<elem key="md5">581b9fbd78fe3bd67a5b46d56784b5b1</elem>
+<elem key="sha1">19700d25323ed1d1accebee2c15c0044188d9d64</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDHzCCAgcCAQEwDQYJKoZIhvcNAQELBQAwVTELMAkGA1UEBhMCWFgxFTATBgNV&#xa;BAcMDERlZmF1bHQgQ2l0eTEcMBoGA1UECgwTRGVmYXVsdCBDb21wYW55IEx0ZDER&#xa;MA8GA1UEAwwIY2EuYWhhZGkwHhcNMjIwNTA5MDY0NTI0WhcNMjIwNjA4MDY0NTI0&#xa;WjBWMQswCQYDVQQGEwJYWDEVMBMGA1UEBwwMRGVmYXVsdCBDaXR5MRwwGgYDVQQK&#xa;DBNEZWZhdWx0IENvbXBhbnkgTHRkMRIwEAYDVQQDDAlkYl9tYXN0ZXIwggEiMA0G&#xa;CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDhJD6J3oy8LwqFUFDMKA+/nmSIttZW&#xa;njBEslttP0k66Z3QeOSbmULaYGO5apPl3xsQ0hJax+AEB/BN9KXypSpnQqiyYpzT&#xa;ZqKUfHkemBG49nGdA5rtfiMFPhPtsv8y4LRr835N66m4e2QtKZkzwZJOWvyyt4Dj&#xa;fIB6BqhuzV+t6n76Wn/TW0d7Cvx/QGyvAiEzZ30Y7SCPsKywHJmHf3fmg8X1euyU&#xa;Qt54XbraGGe7br4MxfQJTUlTdg89dQuRHAcPR9XKVhA8wv6wXMgnQo9gtJGOAhfu&#xa;LB0Hyov1TSgvya/4HiW/bt/wGAa+H8+c8Xi+rlzECVp1Pghw/8E6lOfNAgMBAAEw&#xa;DQYJKoZIhvcNAQELBQADggEBAEQ1NEwKCY3G2i/dAdZAmC2vZtJkXkxs/unadvc5&#xa;ZcqeNWC6wOetH82DDMhTMvr17hX/MwaaXrpRl7I/jiwBcydR2oP1QZDv5P5++yk3&#xa;aMCH6E4Vpg2Lhg9nY1yYpjZux6Tc4wxSC1evz3+0ZJy8Fv20pfbtyA/bvGbWlQWq&#xa;DPoFBP9MPTNYbY/r65L1GlDRQ3ChpX15VIhhzyYIfjCj6BFeoEhcXPSs7/CH0duU&#xa;CP4w6rhUTeIxWaqsQhipASZVqgtmUh+Vu4oOfC6yizebtvidBzWe4q7rCC455BON&#xa;yKNZuPyoGvd50zC8YghPN1m7Ts0EEBcQHNuLhtlTtOU0eq4=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="21115"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+<port protocol="tcp" portid="21116"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+<port protocol="tcp" portid="21117"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+</ports>
+<times srtt="9498" rttvar="1329" to="100000"/>
+</host>
+<runstats><finished time="1694024994" timestr="Wed Sep  6 21:29:54 2023" summary="Nmap done at Wed Sep  6 21:29:54 2023; 1 IP address (1 host up) scanned in 1427.49 seconds" elapsed="1427.49" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

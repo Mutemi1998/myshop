@@ -1,0 +1,63 @@
+# Nmap 7.94 scan initiated Wed Sep  6 21:06:06 2023 as: nmap -sC -sV -p- -oA nameofoutput admin.sasakonnect.net
+Nmap scan report for admin.sasakonnect.net (105.29.165.254)
+Host is up (0.0095s latency).
+Not shown: 65522 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE     VERSION
+80/tcp    open     http        nginx 1.20.2
+443/tcp   open     ssl/http    nginx 1.20.2
+| tls-alpn: 
+|_  http/1.1
+| ssl-cert: Subject: commonName=admin.sasakonnect.net
+| Subject Alternative Name: DNS:admin.sasakonnect.net
+| Not valid before: 2023-03-25T00:00:00
+|_Not valid after:  2024-03-24T23:59:59
+|_ssl-date: TLS randomness does not represent time
+|_http-trane-info: Problem with XML parsing of /evox/about
+|_http-server-header: nginx/1.20.2
+|_http-title: Konnect | Admin Interface 
+| tls-nextprotoneg: 
+|_  http/1.1
+1723/tcp  filtered pptp
+8001/tcp  open     http        nginx 1.20.2
+|_http-title: Index of /
+| http-ls: Volume /
+| SIZE      TIME               FILENAME
+| 17487783  06-Dec-2021 10:12  KonnectAuth.apk
+| 159726    01-Oct-2022 08:45  privacy_policy.html
+|_
+|_http-server-header: nginx/1.20.2
+8803/tcp  open     unknown
+9000/tcp  open     nagios-nsca Nagios NSCA
+9002/tcp  open     ssl/http    HP Integrated Lights-Out web interface
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=ILOCN77150B4W/organizationName=Hewlett Packard Enterprise/stateOrProvinceName=Texas/countryName=US
+| Subject Alternative Name: DNS:ILOCN77150B4W
+| Not valid before: 2017-04-15T12:50:04
+|_Not valid after:  2032-04-14T12:50:04
+9443/tcp  open     nagios-nsca Nagios NSCA
+10011/tcp open     ssh         OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 d8:a8:9d:c7:05:99:26:f4:8e:c1:1c:f8:b4:b1:7c:d2 (RSA)
+|   256 c2:24:68:13:3d:47:17:06:0b:5b:df:12:3c:fe:ce:b1 (ECDSA)
+|_  256 87:fb:82:d6:3f:d8:9a:78:3b:77:8a:1e:01:df:92:f7 (ED25519)
+13306/tcp open     mysql       MySQL 5.5.5-10.5.9-MariaDB-log
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.5.9-MariaDB-log
+|   Thread ID: 3391774
+|   Capabilities flags: 65534
+|   Some Capabilities: SwitchToSSLAfterHandshake, FoundRows, SupportsCompression, DontAllowDatabaseTableColumn, Speaks41ProtocolOld, SupportsTransactions, IgnoreSigpipes, LongColumnFlag, SupportsLoadDataLocal, ODBCClient, Support41Auth, IgnoreSpaceBeforeParenthesis, InteractiveClient, Speaks41ProtocolNew, ConnectWithDatabase, SupportsAuthPlugins, SupportsMultipleStatments, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: uB)BT__AdTW;^G*:'RJY
+|_  Auth Plugin Name: mysql_native_password
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=db_master/organizationName=Default Company Ltd/countryName=XX
+| Not valid before: 2022-05-09T06:45:24
+|_Not valid after:  2022-06-08T06:45:24
+21115/tcp open     unknown
+21116/tcp open     unknown
+21117/tcp open     unknown
+Service Info: CPE: cpe:/h:hp:integrated_lights-out
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep  6 21:29:54 2023 -- 1 IP address (1 host up) scanned in 1427.49 seconds

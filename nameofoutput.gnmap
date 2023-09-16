@@ -1,0 +1,4 @@
+# Nmap 7.94 scan initiated Wed Sep  6 21:06:06 2023 as: nmap -sC -sV -p- -oA nameofoutput admin.sasakonnect.net
+Host: 105.29.165.254 ()	Status: Up
+Host: 105.29.165.254 ()	Ports: 80/open/tcp//http//nginx 1.20.2/, 443/open/tcp//ssl|http//nginx 1.20.2/, 1723/filtered/tcp//pptp///, 8001/open/tcp//http//nginx 1.20.2/, 8803/open/tcp/////, 9000/open/tcp//nagios-nsca//Nagios NSCA/, 9002/open/tcp//ssl|http//HP Integrated Lights-Out web interface/, 9443/open/tcp//nagios-nsca//Nagios NSCA/, 10011/open/tcp//ssh//OpenSSH 7.4 (protocol 2.0)/, 13306/open/tcp//mysql//MySQL 5.5.5-10.5.9-MariaDB-log/, 21115/open/tcp/////, 21116/open/tcp/////, 21117/open/tcp/////	Ignored State: closed (65522)
+# Nmap done at Wed Sep  6 21:29:54 2023 -- 1 IP address (1 host up) scanned in 1427.49 seconds
