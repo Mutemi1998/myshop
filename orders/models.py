@@ -1,9 +1,9 @@
 from django.db import models
 from shop.models import Product
+from django.contrib.auth.models import User  # Import the User model from Django's auth app
+
 class Order(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    email = models.EmailField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     address = models.CharField(max_length=250)
     postal_code = models.CharField(max_length=20)
     city = models.CharField(max_length=100)

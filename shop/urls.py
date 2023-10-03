@@ -5,10 +5,14 @@ from rest_framework import routers
 app_name = 'shop'
 urlpatterns = [
     # product and category apis
-    path('product/<int:pk>/', views.ProductDetail.as_view()),
-    path('product/', views.ProductViewSet.as_view(), name='product'),
-    path('category/<int:pk>/', views.CategoryDetail.as_view()),
-    path('category/', views.CategoryViewSet.as_view(), name='product'),
+    path('products/<int:pk>/', views.ProductDetail.as_view()),
+    path('products/', views.ProductViewSet.as_view(), name='product'),
+    path('categories/<int:pk>/', views.CategoryDetail.as_view()),
+    path('categories/', views.CategoryViewSet.as_view(), name='product'),
+    path('ratings/createOrEdit/', views.CreateRatingView.as_view(), name='create-rating'),
+    path('reviews/createOrEdit/', views.CreateReviewView.as_view(), name='create-review'),
+    path('ratings/', views.RatingViewSet.as_view(), name='create-rating'),
+    path('reviews/', views.RatingViewSet.as_view(), name='create-review'),
 
 
     ##Legacy codes to be removed

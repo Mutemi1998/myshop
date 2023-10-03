@@ -1,7 +1,5 @@
 from django.contrib import admin
-
-# Register your models here.
-from .models import Category, Product
+from .models import *
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug']
@@ -13,3 +11,14 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ['available', 'created', 'updated']
     list_editable = ['price', 'available']
     prepopulated_fields = {'slug': ('name',)}
+@admin.register(ProductThumpNail)
+class Thump_nailsAdmin(admin.ModelAdmin):
+   list_display = ['id','product','image'] 
+   
+@admin.register(Rating)
+class RatingAdmin(admin.ModelAdmin):
+   list_display = ['product','user','rating'] 
+   
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+   list_display = ['product','user','text']
